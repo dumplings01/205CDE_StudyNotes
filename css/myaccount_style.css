@@ -1,0 +1,99 @@
+* {
+    font-family: Georgia;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+}
+
+/* navigation bar */
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3B9C9C;
+    position: fixed;
+    margin: 0px;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(24, 24, 24);
+}
+
+/* settings right menu bar */
+ul {
+    list-style-type: none;
+    margin-top: 0px;
+    margin: 0;
+    padding: 0px;
+    padding-top: 60px;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #AFDCEC;
+    color: #000;
+}
+
+/* content in settings */
+.rightcontent {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-top: 0px;
+    max-width: 500px;
+    margin-left: 220px;
+    margin-right: 30px;
+    position: static;
+}
+
+/* input bar style */
+input {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    padding: 12px 20px 12px 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+#confirmsettings {
+    background-color: #045F5F;
+    width: 180px;
+    border: 1px;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 2px;
+    cursor: pointer;
+}
+
+#confirmsettings:hover {
+    background-color: #033E3E
+}

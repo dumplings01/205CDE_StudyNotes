@@ -1,0 +1,77 @@
+* {
+    font-family: Georgia;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+}
+
+/* navigation bar */
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3B9C9C;
+    position: fixed;
+    margin: 0px;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(24, 24, 24);
+}
+
+/* settings right menu bar */
+ul {
+    list-style-type: none;
+    margin-top: 0px;
+    margin: 0;
+    padding: 0px;
+    padding-top: 60px;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #AFDCEC;
+    color: #000;
+}
+
+/* content in settings */
+.rightcontent {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-top: 0px;
+    max-width: 500px;
+    margin-left: 220px;
+    margin-right: 30px;
+    position: static;
+}
+
+.rating-section {
+    float: right;
+}
+
+/* rated questions star icons */
+.checked {
+    color: orange;
+}
