@@ -1,44 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
-    font-family: Georgia;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    background-color: #ececec;
+}
+
+html, body, button, a, input {
+    height: 100%;
     margin: 0px;
-    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
 }
 
 /* navigation bar */
-.navbar {
+.logo {
+    width: auto;
+    height: 20px;
+    cursor: pointer;
+    margin: 27px 30px;
+    margin-bottom: 22px;
+}
+
+.nav-fixed {
     width: 100%;
-    overflow: hidden;
-    background-color: #3B9C9C;
     position: fixed;
     margin: 0px;
     z-index: 1;
 }
 
-.navbar a {
-    float: left;
-    font-size: 17px;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: rgb(24, 24, 24);
+.navbar {
+    display: flex;
+    background-color: #2C3539;
+    align-items: center;
+    justify-content: center;
 }
 
 /* settings right menu bar */
 ul {
     list-style-type: none;
-    margin-top: 0px;
-    margin: 0;
+    margin: 0px;
+    margin-top: 16px;
     padding: 0px;
     padding-top: 60px;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: #525b5f;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -46,22 +59,29 @@ ul {
 
 li a {
     display: block;
-    color: #000;
+    color: #d4d4d4;
     padding: 16px 18px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #AFDCEC;
-    color: #000;
+    background-color: #2C3539;
+    color: white;
+}
+
+.current {
+    background-color: #393f42;
+    color: white;
 }
 
 /* content in settings */
 .rightcontent {
+    padding-top: 100px;
+    padding-bottom: 85px;
     margin-top: 0px;
-    padding-top: 65px;
-    padding-bottom: 65px;
-    margin-left: 220px;
+    max-width: 500px;
+    margin-left: 240px;
+    margin-right: 30px;
     position: static;
 }
 

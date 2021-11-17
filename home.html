@@ -5,68 +5,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/home_style.css">
     </head>
     
     <body>
-        
-    <header>
-        <a href="home.html" class="logo">StudyNotes</a>
-        <ul>
-            <li><a href="favouritedtopics.html">Favourited Topics</a></li>
-            <li><a href="questionbank.html">Question Bank</a></li>
-        </ul>
-    </header>
-    
-    <div class="homepage_image">
-        <div class="title">Welcome to StudyNotes</div>
-    </div>       
+        <div class="nav-fixed">
+            <nav>
+                <img class="logo" src="src/logo.png" alt="logo">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="myaccount.html">Account</a></li>
+                    <li><a href="questionbank.html">Question Bank</a></li>
+                    <li><a href="#">+</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>            
+            </nav>
+        </div>
 
-    <div class="content">
-        
-        <center>
-            <br><br>
-            
-            <div class="topic_container">
-                <label>Favourited Topics</label>
+        <div class="home-content">
+            <center>
                 <br><br>
-
-                <a href="#" class="question_btn">Python</a>&emsp;
                 
-                <a href="#" class="question_btn">Java</a>
-            </div>
-            <br><br><br>
+                <div class="fav_questions">
+                    <label>Favourited Topics</label>
+                    <br><br>
 
-            <div class="topic_container">
-                <label>Suggested Topics</label>
-                
-                <br><br>
-                <a href="question1.html" class="question_btn">Marketing</a>&emsp;
+                    <a href="#" class="question_btn">Python</a>
+                    
+                    <a href="#" class="question_btn">Java</a>
+                </div>
+                <br><br><br>
 
-                <a href="#" class="question_btn">Statistics</a>
-                <br><br>
+                <div class="my_questions">
+                    <label>My Questions</label>
+                    
+                    <br><br>
+                    <a href="question1.html" class="question_btn">Marketing</a>
 
-                <a href="#" class="question_btn">English</a>&emsp;
+                    <a href="#" class="question_btn">Statistics</a>
+                    <br><br>
 
-                <a href="#" class="question_btn">Medicine</a>
-                <br><br>
+                    <a href="#" class="question_btn">English</a>
 
-                <a href="#" class="question_btn">Japanese</a>&emsp;
-
-                <a href="#" class="question_btn">Calculus</a>
-                <br><br>
-
-                <a href="#" class="question_btn">Physics</a>&emsp;
-
-                <a href="#" class="question_btn">Chemistry</a>
-                <br><br>
-
-                <a href="#" class="question_btn">Biology</a>&emsp;
-
-                <a href="#" class="question_btn">C++</a>
-            </div>
-        </center>
-    </div>
-        
+                    <a href="#" class="question_btn">Medicine</a>
+                </div>
+            </center>
+        </div>
+    <script src="js/home.js"></script>
     </body>
 </html>
