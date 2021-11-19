@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+}
+
+html, body, button, a, input, textarea {
+    height: 100%;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+/* navigation bar */
+.logo {
+    width: auto;
+    height: 20px;
+    cursor: pointer;
+    margin: 27px 30px;
+    margin-bottom: 22px;
+}
+
+.nav-fixed {
+    width: 100%;
+    position: fixed;
+    margin: 0px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    background-color: #2C3539;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin: 0px 10px;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: 1px;
+    border-radius: 8px;
+    border-color:#2C3539;
+    margin: 20px 0px;
+    padding: 15px;
+}
+
+#answer {
+    height: 140px;
+    margin: 0px;
+}
+
+.question-content {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto 20%;
+    padding: 30px 0px 40px;
+}
+
+#question_title {
+    height: 50px;
+    width: 60%;
+    border: 1px;
+    border-radius: 8px;
+    border-color:#2C3539;
+    margin: 30px 10px 0px;
+    padding: 15px;
+}
+
+.question {
+    margin: 60px 0px;
+}
+
+.question label {
+    float: left;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 30px;
+}
+
+#radio_btn {
+    margin: 0px 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.save_btn {
+    background-color: rgb(63, 110, 102);
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border: 1px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px auto;
+    margin: 6px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    float: right;
+}
+
+.save_btn:hover{
+    background-color: rgb(57, 75, 72);
+    box-shadow: 5px 5px 5px #cecece81;
+}

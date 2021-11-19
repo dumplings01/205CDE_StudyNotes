@@ -31,7 +31,7 @@ html, body, button, a, input, textarea {
 
 .nav-fixed {
     width: 100%;
-    position: fixed;
+    position: sticky;
     margin: 0px;
     z-index: 1;
 }
@@ -44,15 +44,45 @@ html, body, button, a, input, textarea {
 }
 
 label {
-    margin: 0px 10px;
+    margin-bottom: 30px;
 }
 
-p {
-    font-size: 17px;
+h3 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    padding: 12px 20px 12px 10px;
+    margin-bottom: 30px; 
 }
 
 .content {
-    max-width: 1200px;
-    margin: auto 60px;
+    width: 300px;
+    margin: 65px auto 0px;
+    position: static;
+}
+
+#confirmsettings {
+    background-color: #045F5F;
+    width: 70%;
+    border: 1px;
+    border-radius: 8px;
+    color: white;
     padding: 10px;
+    margin: 20px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#confirmsettings:hover {
+    background-color: #033E3E
 }

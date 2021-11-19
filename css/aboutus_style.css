@@ -147,32 +147,7 @@ nav{
     margin: auto;
 }
 
-/* home page */
-.question_btn {
-    background-color: rgb(63, 110, 102);
-    color: #fff;
-    width: 35%;
-    border: 1px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    padding: 30px 22px;
-    margin: 6px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.question_btn:hover {
-    background-color: rgb(57, 75, 72);
-    box-shadow: 5px 5px 5px #cecece81;
-}
-
-.fav_questions {
-    margin: 75px 10px 10px;
-}
-
-.my_questions {
-    margin: 10px 10px 20px;
+.about-section {
+    width: 60%;
+    margin: 0px auto;
 }

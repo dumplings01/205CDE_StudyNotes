@@ -85,6 +85,10 @@ li a:hover {
     position: static;
 }
 
+h3 {
+    margin: 40px 0px 10px;
+}
+
 /* my question bank delete button */
 #delete {
     background-color: #808080;
