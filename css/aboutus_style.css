@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(188, 214, 210);
+    background-color: rgb(63, 78, 76);
 }
 
 html, body, button, a, input {
@@ -143,11 +143,23 @@ nav{
 
 .home-content {
     max-width: 1000px;
-    height: 100%;
+    height: max-content;
     margin: auto;
+    background-color: rgb(103, 150, 142);
 }
 
 .about-section {
-    width: 60%;
+    width: 80%;
     margin: 0px auto;
+    padding: 40px 0px;
+}
+
+.aboutus-img {
+    width: 100%;
+    margin: 75px auto 0px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
 }

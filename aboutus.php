@@ -3,15 +3,27 @@ session_start();
 $user=$_SESSION["user"];
 ?>
 
+<?php
+    require_once ('mysqli_connect.php');
+    $user=$_SESSION["user"];
+
+    if ($user === NULL) {
+        echo "<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Error! Please sign in to access this page!')
+            window.location.href='signin-signup.php';</SCRIPT>";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home | StudyNotes</title>
+        <title>About Us | StudyNotes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/aboutus_style.css">
+        
     </head>
     
     <body>
@@ -33,19 +45,32 @@ $user=$_SESSION["user"];
         </div>
 
         <div class="home-content">
+            <img class="aboutus-img" src="src/uni.jpg" alt="aboutus-img1">
             <div class="about-section">
-                <br><br><br><br><br><br>
                 <h1>
                     About Us
                 </h1>
-                <p class="text">
+                <p>
                     Welcome to StudyNotes! Do you know that StudyNotes is
-                    created by an individual who wants to build a website which can help other students academically
+                    created by an individual who wants to build a website
+                    which can help other students academically?
                 </p>
-    
-
-                
+            </div>
+            
+            <div class="about-section">
+                <h1>
+                    About StudyNotes
+                </h1>
+                <p>
+                    StudyNotes is a website that you can do your revisions in
+                    by adding and saving your questions into your account.
+                    Questions sheets which are saved into your account in the website
+                    can be accessed after signing in with the account you have saved
+                    the questions with. You can also do the questions in the website
+                    and then get the result on how you have done in your questions. 
+                </p>
             </div>
         </div>
+        <script src="js/navbar.js"></script>
     </body>
 </html>

@@ -44,11 +44,11 @@ $user=$_SESSION["user"];
 
                 //Retrieve and print every record:
                 while ($row = mysqli_fetch_array($r)) {
-                    print "<p><h3>{$row['title']}</h3>
-                    Date created: {$row['dateCreated']}<br>
-                    <a href=\"edit_question.php?questionsSheetID={$row['questionSheetID']}\">Edit</a>
-                    <a href=\"delete_question.php?questionSheetID={$row['questionSheetID']}\">Delete</a>
-                    </p>\n";
+                    print "<div class='container'><p><h3>{$row['title']}</h3>
+                    Created by: {$row['username']}<br>
+                    <a href=\"edit_question.php?questionsSheetID={$row['questionSheetID']}\" id='btn'>Edit</a>
+                    <a href=\"delete_question.php?questionSheetID={$row['questionSheetID']}\" id='btn'>Delete</a>
+                    </p></div>\n";
                 }
 
             } else { //Query didn't run

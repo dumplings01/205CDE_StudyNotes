@@ -10,7 +10,7 @@ body {
     background-color: #ececec;
 }
 
-html, body, button, a, input {
+html, body, button, a, input, textarea {
     height: 100%;
     margin: 0px;
     font-family: "Poppins", sans-serif;
@@ -31,7 +31,7 @@ html, body, button, a, input {
 
 .nav-fixed {
     width: 100%;
-    position: fixed;
+    position: sticky;
     margin: 0px;
     z-index: 1;
 }
@@ -43,72 +43,35 @@ html, body, button, a, input {
     justify-content: center;
 }
 
-/* settings right menu bar */
-ul {
-    list-style-type: none;
-    margin: 0px;
-    margin-top: 16px;
-    padding: 0px;
-    padding-top: 60px;
-    width: 200px;
-    background-color: #525b5f;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-li a {
-    display: block;
-    color: #d4d4d4;
-    padding: 16px 18px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #2C3539;
-    color: white;
-}
-
-.current {
-    background-color: #393f42;
-    color: white;
-}
-
-/* content in settings */
-.rightcontent {
-    padding-top: 100px;
-    padding-bottom: 85px;
-    margin-top: 0px;
-    max-width: 500px;
-    margin-left: 240px;
-    margin-right: 30px;
-    position: static;
+label {
+    margin-bottom: 30px;
 }
 
 h3 {
-    margin: 40px 0px 10px;
+    margin-bottom: 20px;
 }
 
-/* my question bank delete button */
-#btn {
+.content {
+    width: 300px;
+    margin: 65px auto 0px;
+    position: static;
+}
+
+#confirmsettings {
     background-color: #045F5F;
-    width: 180px;
+    width: 70%;
     border: 1px;
     border-radius: 8px;
     color: white;
     padding: 10px;
+    margin: 20px 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px;
     cursor: pointer;
 }
 
-#btn:hover {
+#confirmsettings:hover {
     background-color: #033E3E;
-}
-
-.container {
-    margin: 25px 0px;
 }

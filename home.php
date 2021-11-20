@@ -103,14 +103,10 @@ $user=$_SESSION["user"];
                             echo "<p>Looks like you have not save any questions yet~<br>Click on the + icon to start saving your questions in StudyNotes now!</p>";
                         }
                     ?>
-
-                    
                 </div>
-                <br><br><br>
-
-                    </form>
+                </form>
             </center>
         </div>
-    <script src="js/home.js"></script>
+    <script src="js/navbar.js"></script>
     </body>
 </html>

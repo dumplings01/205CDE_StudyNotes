@@ -12,32 +12,6 @@
             window.alert('Error! Please sign in to access this page!')
             window.location.href='signin-signup.php';</SCRIPT>";
     }
-    
-    // home quesstion button click variable questionsheet id
-    if(isset($_GET['username'])){
-        
-        // user pick on the question button on main page and will return questionsheetid
-        $username = $_GET['username'];
-        
-        // test
-        $query = "SELECT username, email FROM users WHERE username='$user'";
-        
-        $search_result = filterTable($query);
-
-    }else{
-        $query = "SELECT username, email FROM users WHERE username=''";
-        
-        $search_result = filterTable($query);
-
-    }
-    
-    function filterTable($query){
-
-        $dbc = mysqli_connect("localhost","root","","studynotes");
-        $filter_result=mysqli_query($dbc,$query);
-        return $filter_result;
-
-    }
 ?>
 
 <!DOCTYPE html>
@@ -68,21 +42,39 @@
         </nav>
         
         <div class="rightcontent">
-            <form method="GET">
-            <header><h1>My Account</h1></header>
-            <br>
-            
-            <?php
-                require_once ('mysqli_connect.php');
-                $user=$_SESSION["user"];
-                echo "<label>Username: ".$user."</label><br><br><br>";
-            ?>
-
-            
+            <form method="POST">
+                <header><h1>My Account</h1></header>
+                <br>
+                
+                <?php
+                    require_once ('mysqli_connect.php');
+                    
+                    $user=$_SESSION["user"];
+                    $query = "SELECT username, email FROM users WHERE username='$user'";
+                        
+                    if($r = mysqli_query($dbc, $query)){
+                        while ($row = mysqli_fetch_array($r)) {
+                            echo "<label>Username: ".$row['username']."</label><br><br>";
+                            echo "<label>Email address: ".$row['email']."</label><br><br><br><br>";
+                        }
+                    }
+                ?>
             </form>
             
-            <h3><label>Change password</label></h3>
-            <button type="submit" id="changepw" name="change_email">Confirm</button>
+            <header><h1>Change Settings</h1></header>
+            <form action="changeemail.php" method="POST">
+                <div class="actioncon">
+                    <label>Change Email</label>
+                    <button type="submit" id="change" name="change_email">Change</button>
+                </div>
+            </form>
+
+            <form action="changepw.php" method="POST">
+                <div class="actioncon">
+                    <label>Change Password</label>
+                    <button type="submit" id="change" name="change_pw">Change</button>
+                </div>
+            </form>
         
         </div>
     </body>

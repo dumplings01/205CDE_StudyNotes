@@ -66,7 +66,8 @@ $user=$_SESSION["user"];
                 <?php require_once ('mysqli_connect.php');
                     $user=$_SESSION["user"];
 
-                    // testing
+                    // ISSUE!! unable to get value through submit button in home page
+                    // so assigned variable value to get output 
                     $questionSheetID = 1;
 
                     $sqlShowQuestions = "SELECT a.question, a.answerA, a.answerB, a.answerC, a.answerD
