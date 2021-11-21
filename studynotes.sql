@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 21, 2021 at 01:05 PM
+-- Generation Time: Nov 21, 2021 at 01:15 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -45,15 +45,6 @@ CREATE TABLE IF NOT EXISTS `questions_content` (
 --
 
 INSERT INTO `questions_content` (`questionID`, `question`, `answerA`, `answerB`, `answerC`, `answerD`, `correctAnswer`, `questionSheetID`) VALUES
-(1, 'What is the output of the following:\r\n\r\nx = 36 / 4 * (3 +  2) * 4 + 2\r\nprint(x)', '182.0', '37', '117', 'The Program executed with errors', 'A', 1),
-(2, 'What is the output of the following code?\r\n\r\nstr = \"pynative\"\r\nprint (str[1:3])', 'py', 'yn', 'pyn', 'nya', 'B', 1),
-(3, 'What is the output of the following code?\r\n\r\ndef calculate (num1, num2=4):\r\n  res = num1 * num2\r\n  print(res)\r\n\r\ncalculate(5, 6)', '20', '10', 'The program executed with errors', '30', 'D', 1),
-(4, 'What is the output of the following code?\r\n\r\nvar = \"James\" * 2  * 3\r\nprint(var)', 'JamesJamesJamesJamesJamesJames', 'JamesJamesJamesJamesJames', 'James', 'Error: invalid syntax', 'A', 1),
-(5, 'What is the output of the following code?\r\n\r\nsampleSet = {\"Jodi\", \"Eric\", \"Garry\"}\r\nsampleSet.add(1, \"Vicki\")\r\nprint(sampleSet)', '{‘Vicki’, ‘Jodi’, ‘Garry’, ‘Eric’}', '{‘Jodi’, ‘Vicki’, ‘Garry’, ‘Eric’}', '{‘Jodi’, ‘Garry’, ‘Eric’, ‘Vicki’}', 'The program executed with error', 'D', 1),
-(6, 'What is the output of the following code?\r\n\r\np, q, r = 10, 20 ,30\r\nprint(p, q, r)', '10 20', '10 20 30', '10, 20, 30', 'Error: invalid syntax', 'B', 1),
-(7, 'What is the output of the following code?\r\n\r\nsampleList = [\"Jon\", \"Kelly\", \"Jessa\"]\r\nsampleList.append(2, \"Scott\")\r\nprint(sampleList)', 'The program executed with errors', '[‘Jon’, ‘Kelly’, ‘Scott’, ‘Jessa’]', '[‘Jon’, ‘Kelly’, ‘Jessa’, ‘Scott’]', '[‘Jon’, ‘Scott’, ‘Kelly’, ‘Jessa’]', 'A', 1),
-(8, 'What is the output of the following code?\r\n\r\nvar= \"James Bond\"\r\nprint(var[2::-1])', 'Jam', 'dno', 'maJ', 'dnoB semaJ', 'C', 1),
-(9, 'What is the output of the following code?\r\n\r\nvalueOne = 5 ** 2\r\nvalueTwo = 5 ** 3\r\n\r\nprint(valueOne)\r\nprint(valueTwo)', '10\r\n15', '25\r\n125', '10\r\n125', 'Error: invalid syntax', 'B', 1),
 (113, 'They _____ in the basement for three months.', 'were made sleeping', 'were made sleep', 'were made to sleep', 'made to sleep', 'C', 26),
 (111, 'She was working on her computer with her baby next to _____.', 'herself', 'her', 'her own', 'hers', 'B', 26),
 (112, 'Well never know what might have happened _____ the email earlier.', 'if he sent', 'had he sent', 'if he has sent', 'did he sent', 'B', 26),
@@ -61,7 +52,6 @@ INSERT INTO `questions_content` (`questionID`, `question`, `answerA`, `answerB`,
 (109, 'I wish I _____ those words. But now its too late.', 'not having said', 'have never said', 'never said', 'had never said', 'D', 26),
 (107, 'Im very happy _____ in India. I really miss being there.', 'to live', 'to have lived', 'to be lived', 'to be living', 'B', 26),
 (108, 'They didnt reach an agreement ______ their differences.', 'on account of', 'due', 'because', 'owing', 'A', 26),
-(10, 'fwefwefw', 'efwefwf', 'wefwefwe', 'wefwefwfew', 'efwefwef', 'D', 1),
 (114, 'Last year, when I last met her, she told me she _____ a letter every day for the last two months.', 'had written', 'has written', 'had been writing', 'wrote', 'C', 26),
 (115, 'He _____ robbed as he was walking out of the bank.', 'had', 'did', 'got', 'were', 'C', 26),
 (116, 'It _____ the best idea to pay for those tickets by credit card. It was too risky.', 'may not have been', 'may not be', 'might not be', 'must not have been', 'A', 26),
@@ -131,7 +121,6 @@ CREATE TABLE IF NOT EXISTS `user_question_sheet` (
 --
 
 INSERT INTO `user_question_sheet` (`questionSheetID`, `title`, `username`, `dateCreated`) VALUES
-(1, 'Python', 'YanYee', '2021-11-18'),
 (3, 'Statistics', 'YanYee', '2021-11-19'),
 (43, 'dummy, to be deleted', 'YanYee', '2021-11-20'),
 (26, 'English', 'adam123', '2021-11-20');
