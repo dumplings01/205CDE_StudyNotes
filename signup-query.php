@@ -17,26 +17,24 @@
 
                 if($result2==TRUE){
 
-                    //pop up mesej jika pendaftaran pengguna berjaya
+                    // Account created
                     echo "<script language='javascript'>
                     window.alert('Your account is created successfully!');
                     window.location.href='signin-signup.php';
                     </script>";
-
                 }else{
 
-                    //pop up mesej jika pendaftaran pengguna gagal
+                    // Username already exist in database
                     echo "<script language='javascript'>
                     window.alert('Error! Please use another username!');
                     window.location.href='signin-signup.php';
                     </script>";
-
                 }
     }
             
     else{
 
-        //pop up mesej jika kedua-dua kata laluan yang dimasukkan tidak sama
+        // Password entered for password and confirm password field are not the same
         echo "<script language='javascript'>
             window.alert('Password is not the same! Please try again!');
             window.location.href='signin-signup.php';

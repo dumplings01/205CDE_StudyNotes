@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,6 +61,8 @@ session_start();
         </div>
 
         <div class="panels-container">
+
+        <!-- DESCRIPTION SHOWN NEXT TO SIGN IN PANEL -->
         <div class="panel left-panel">
             <div class="content">
             <h3>Welcome back to StudyNotes</h3>
@@ -78,6 +79,8 @@ session_start();
             <a href="forgotpw.php" class="forgotpw">Forgot password?</a>
             </div>
         </div>
+
+        <!-- DESCRIPTION SHOWN NEXT TO SIGN UP PANEL -->
         <div class="panel right-panel">
             <div class="content">
             <h3>Welcome to StudyNotes</h3>

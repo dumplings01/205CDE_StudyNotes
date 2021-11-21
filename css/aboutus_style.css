@@ -1,3 +1,4 @@
+/* import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -80,6 +81,7 @@ nav{
     transition: all 0.3s ease;
 }
 
+/* responsive layout */
 @media screen and (max-width: 1400px){
     .nav-links {
         width: 50%;

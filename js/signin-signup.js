@@ -1,3 +1,4 @@
+// Assign variables values
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
@@ -8,6 +9,7 @@ const signin_togglePassword = document.querySelector('#signin-togglePassword');
 const signup_togglePassword = document.querySelector('#signup-togglePassword');
 const confirm_togglePassword = document.querySelector('#confirm-togglePassword');
 
+// Switching between Sign in and Sign up panel
 sign_up_btn.addEventListener("click", () => {
     container.classList.add("sign-up-mode");
 });
@@ -17,29 +19,36 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 signin_togglePassword.addEventListener('click', function (e) {
+
     // toggle the type attribute
     const type = signin_password.getAttribute('type') === 'password' ? 'text' : 'password';
     signin_password.setAttribute('type', type);
+
     // toggle the eye / eye slash icon
     this.classList.toggle('bi-eye');
 });
 
 signup_togglePassword.addEventListener('click', function (e) {
+
     // toggle the type attribute
     const type = signup_password.getAttribute('type') === 'password' ? 'text' : 'password';
     signup_password.setAttribute('type', type);
+
     // toggle the eye / eye slash icon
     this.classList.toggle('bi-eye');
 });
 
 confirm_togglePassword.addEventListener('click', function (e) {
+
     // toggle the type attribute
     const type = confirm_password.getAttribute('type') === 'password' ? 'text' : 'password';
     confirm_password.setAttribute('type', type);
+
     // toggle the eye / eye slash icon
     this.classList.toggle('bi-eye');
 });
 
+// Clear input field when switching between Sign in and Sign up panels
 function clearfield() {
     document.getElementById("signin-username").value = "";
     document.getElementById("signin-password").value = "";
@@ -49,6 +58,7 @@ function clearfield() {
     document.getElementById("confirm-password").value = "";
 }
 
+// Error message shown in forgot password page
 function error_msg(){
     window.alert("Error! Server is down. Please try again later");
     window.location.href("forgotpw.php");

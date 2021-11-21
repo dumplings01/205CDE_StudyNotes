@@ -16,12 +16,14 @@ session_start();
         if($sql->num_rows>0){
             
             $_SESSION["user"]=$_POST['signin_username']; // Assign session value to variable 'user'
+
             // Sign in successful
             echo "<SCRIPT LANGUAGE='JavaScript'>
                 window.alert('Sign in successful! Welcome to StudyNotes, ".$_SESSION['user']."!')
                 window.location.href='home.php';</SCRIPT>";
         
         } else {
+            
             // Sign in failed
             echo "<SCRIPT LANGUAGE='JavaScript'>
                 window.alert('Incorrect username or password entered!')
