@@ -19,6 +19,8 @@ session_start();
     <div class="container">
         <div class="forms-container">
         <div class="signin-signup">
+
+            <!-- SIGN IN -->
             <form method="POST" action="signin-query.php" class="sign-in-form">
                 <h2 class="title">Sign in</h2>
                 <div class="input-field">
@@ -33,7 +35,7 @@ session_start();
                 <input type="submit" value="Login" name="signin_submit" class="btn solid" />
             </form>
 
-
+            <!-- SIGN OUT -->
             <form method="POST" action="signup-query.php" class="sign-up-form">
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">

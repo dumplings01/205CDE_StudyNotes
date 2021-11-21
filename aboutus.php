@@ -1,12 +1,13 @@
 <?php
-session_start();
-$user=$_SESSION["user"];
+session_start();                // starts session for current page
+$user=$_SESSION["user"];        // assign session user attribute's value
 ?>
 
 <?php
     require_once ('mysqli_connect.php');
     $user=$_SESSION["user"];
 
+    // if user tries to enter without logging in, they will be move out to signin-signup.php
     if ($user === NULL) {
         echo "<SCRIPT LANGUAGE='JavaScript'>
             window.alert('Error! Please sign in to access this page!')
@@ -27,6 +28,8 @@ $user=$_SESSION["user"];
     </head>
     
     <body>
+
+        <!-- NAV BAR -->
         <div class="nav-fixed">
             <nav>
                 <img class="logo" src="src/logo.png" alt="logo">
@@ -36,6 +39,8 @@ $user=$_SESSION["user"];
                     <li><a href="myaccount.php">Settings</a></li>
                     <li><a href="add_question.php">+</a></li>
                 </ul>
+
+                <!-- SIDE NAV BAR IF SCREEN SIZE IS MINIMIZED-->
                 <div class="burger">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -44,6 +49,7 @@ $user=$_SESSION["user"];
             </nav>
         </div>
 
+        <!-- CONTENT -->
         <div class="home-content">
             <img class="aboutus-img" src="src/uni.jpg" alt="aboutus-img1">
             <div class="about-section">
@@ -71,6 +77,8 @@ $user=$_SESSION["user"];
                 </p>
             </div>
         </div>
-        <script src="js/navbar.js"></script>
+
+        <!-- CALLS JAVASCRIPT FUNCTION FOR RESPONSIVE NAV BAR -->
+        <script src="js/navbar.js"></script> 
     </body>
 </html>

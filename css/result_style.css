@@ -45,6 +45,7 @@ html, body, button, a, input, textarea {
 
 label {
     margin: 0px 10px;
+    font-size: 22px;
 }
 
 p {
@@ -53,6 +54,60 @@ p {
 
 .content {
     max-width: 1200px;
-    margin: auto 60px;
+    width: 80%;
+    margin: auto;
     padding: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    min-height: 200px;
+    border: 1px;
+    border-radius: 8px;
+    border-color:#2C3539;
+    margin: 20px 0px;
+    padding: 15px;
+}
+
+.answer_btn {
+    background-color: rgb(63, 110, 102);
+    min-height: 100px;
+    max-height: fit-content;
+    width: 100%;
+    border: 1px;
+    border-radius: 8px;
+    color: rgb(217, 223, 222);
+    padding: 35px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 8px 5px;
+    vertical-align: top;
+}
+
+.youranswer {
+    margin: 20px 30px 50px;
+    width: 100%;
+    font-size:18px;
+}
+
+.ok_btn {
+    background-color: #696969;
+    min-width: 160px;
+    border: 1px;
+    border-radius: 8px;
+    color: white;
+    padding: 18px 14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 6px auto 30px;
+    cursor: pointer;
+}
+
+.ok_btn:hover{
+    background-color: #3A3B3C;
+    color: white;
 }

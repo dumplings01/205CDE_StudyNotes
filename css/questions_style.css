@@ -59,13 +59,6 @@ textarea {
     padding: 15px;
 }
 
-.content {
-    max-width: 1200px;
-    margin-top: 20px;
-    margin: auto;
-    padding: 10px;
-}
-
 .question_label {
     margin: 0px 100px;
     margin-top: 100px;
@@ -96,38 +89,6 @@ textarea {
     font-size: 15px;
     margin: 8px 5px;
     vertical-align: top;
-    cursor: pointer;
-}
-
-.answer_btn:hover {
-    background-color: rgb(51, 95, 88);
-}
-
-.answer_btn:focus {
-    background-color: rgb(28, 71, 64);
-    color:white;
-}
-
-/* back and next button; alignment problems */
-.other_question {
-    background-color: #98AFC7;
-    width: 70px;
-    border: 1px;
-    border-radius: 8px;
-    color: black;
-    padding: 14px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 6px 25px;
-    cursor: pointer;
-}
-
-.other_question:hover{
-    background-color: #368BC1;
-    color: white;
-    text-decoration: none;
 }
 
 /* alignment problems; make submit button in the middle */
@@ -153,18 +114,22 @@ textarea {
 
 .btns_container {
     max-width: 800px;
-    margin: 0 auto;
-}
-
-.back_btn {
-    float: left;
-}
-
-.next_btn {
-    float: right;
+    margin: 50px auto;
 }
 
 .submit_container {
     position: relative;
     margin: 0 auto;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-around;
+    margin: auto 30px;
+}
+
+#radio_btn {
+    margin: auto 20px;
+    width: 30px;
+    height: 30px;
 }

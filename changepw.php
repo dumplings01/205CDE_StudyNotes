@@ -1,7 +1,24 @@
+<?php
+session_start();                // starts session for current page
+$user=$_SESSION["user"];        // assign session user attribute's value
+?>
+
+<?php
+    require_once ('mysqli_connect.php');
+    $user=$_SESSION["user"];
+
+    // if user tries to enter without logging in, they will be move out to signin-signup.php
+    if ($user === NULL) {
+        echo "<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Error! Please sign in to access this page!')
+            window.location.href='signin-signup.php';</SCRIPT>";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Question 1 | StudyNotes</title>
+        <title>Change Password | StudyNotes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -32,6 +49,9 @@
 
                 <center>
                     <button type="submit" id="confirmsettings" name="change_pw">Confirm</button>
+            </form>
+            <form action="myaccount.php">
+                <button type="submit" id="cancel" name="cancel_btn">Cancel</button>
                 </center>
             </form>
         </div>

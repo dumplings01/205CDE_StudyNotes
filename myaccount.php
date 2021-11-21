@@ -1,12 +1,13 @@
 <?php
-    session_start();
-    $user=$_SESSION["user"];
+session_start();                // starts session for current page
+$user=$_SESSION["user"];        // assign session user attribute's value
 ?>
 
 <?php
     require_once ('mysqli_connect.php');
     $user=$_SESSION["user"];
 
+    // if user tries to enter without logging in, they will be move out to signin-signup.php
     if ($user === NULL) {
         echo "<SCRIPT LANGUAGE='JavaScript'>
             window.alert('Error! Please sign in to access this page!')
@@ -26,12 +27,14 @@
     </head>
     
     <body>
+        <!-- TOP NAV BAR -->
         <div class="nav-fixed">
             <div class="navbar">
                 <a href="home.php"><img class="logo" src="src/logo.png" alt="logo"></a>
             </div>
         </div>
         
+        <!-- LEFT PANEL NAV BAR-->
         <nav>
             <ul>
                 <div class="current"><li><a href="myaccount.php">My Account</a></li></div>
@@ -41,15 +44,18 @@
             </ul>
         </nav>
         
+        <!-- RIGHT PANEL CONTENT -->
         <div class="rightcontent">
             <form method="POST">
                 <header><h1>My Account</h1></header>
                 <br>
                 
                 <?php
-                    require_once ('mysqli_connect.php');
+                    require_once ('mysqli_connect.php'); // Connect to database
                     
                     $user=$_SESSION["user"];
+
+                    // Define query to get username and email value
                     $query = "SELECT username, email FROM users WHERE username='$user'";
                         
                     if($r = mysqli_query($dbc, $query)){
@@ -62,6 +68,8 @@
             </form>
             
             <header><h1>Change Settings</h1></header>
+
+            <!-- CHANGE EMAIL SETTINGS BUTTON -->
             <form action="changeemail.php" method="POST">
                 <div class="actioncon">
                     <label>Change Email</label>
@@ -69,6 +77,7 @@
                 </div>
             </form>
 
+            <!-- CHANGE PASSWORD SETTINGS BUTTON -->
             <form action="changepw.php" method="POST">
                 <div class="actioncon">
                     <label>Change Password</label>

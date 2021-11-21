@@ -169,10 +169,6 @@ nav{
     box-shadow: 5px 5px 5px #cecece81;
 }
 
-.fav_questions {
-    margin: 75px 10px 10px;
-}
-
 .my_questions {
-    margin: 10px 10px 20px;
+    margin: 75px 10px 10px;
 }

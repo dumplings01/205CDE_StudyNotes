@@ -68,14 +68,14 @@ input {
     position: static;
 }
 
-#confirmsettings {
+#confirmsettings, #cancel {
     background-color: #045F5F;
     width: 70%;
     border: 1px;
     border-radius: 8px;
     color: white;
     padding: 10px;
-    margin: 20px 0px;
+    margin: 30px 0px 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -85,4 +85,13 @@ input {
 
 #confirmsettings:hover {
     background-color: #033E3E
+}
+
+#cancel {
+    background-color: #7d8181;
+    margin-top: 20px;
+}
+
+#cancel:hover {
+    background-color: #434747;
 }

@@ -1,6 +1,18 @@
 <?php
-session_start();
-$user=$_SESSION["user"];
+session_start();                // starts session for current page
+$user=$_SESSION["user"];        // assign session user attribute's value
+?>
+
+<?php
+    require_once ('mysqli_connect.php');
+    $user=$_SESSION["user"];
+
+    // if user tries to enter without logging in, they will be move out to signin-signup.php
+    if ($user === NULL) {
+        echo "<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Error! Please sign in to access this page!')
+            window.location.href='signin-signup.php';</SCRIPT>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +27,7 @@ $user=$_SESSION["user"];
     </head>
 
     <body>
+        <!-- NAV BAR -->
         <div class="nav-fixed">
             <div class="navbar">
                 <a href="home.php"><img class="logo" src="src/logo.png" alt="logo"></a>
@@ -26,6 +39,7 @@ $user=$_SESSION["user"];
                 <center>
                 <br><br><br>
 
+                <!--Title-->
                 <label>Title: </label>
                 <input type="text" id="question_title" name="question_title" required placeholder="Give this question sheet a title...">
 
@@ -35,7 +49,7 @@ $user=$_SESSION["user"];
                     <textarea name="question1" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer1" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer1" value="A" required></input>
                         <textarea name="answer_1A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer1" value="B"></input>
                         <textarea name="answer_1B" id="answer" value="" required placeholder="B."></textarea>
@@ -55,7 +69,7 @@ $user=$_SESSION["user"];
                     <textarea name="question2" id="question_text" value="" required placeholder="Write your question here..."></textarea>
         
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer2" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer2" value="A" required></input>
                         <textarea name="answer_2A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer2" value="B"></input>
                         <textarea name="answer_2B" id="answer" value="" required placeholder="B."></textarea>
@@ -75,7 +89,7 @@ $user=$_SESSION["user"];
                     <textarea name="question3" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer3" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer3" value="A" required></input>
                         <textarea name="answer_3A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer3" value="B"></input>
                         <textarea name="answer_3B" id="answer" value="" required placeholder="B."></textarea>
@@ -95,7 +109,7 @@ $user=$_SESSION["user"];
                     <textarea name="question4" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer4" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer4" value="A" required></input>
                         <textarea name="answer_4A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer4" value="B"></input>
                         <textarea name="answer_4B" id="answer" value="" required placeholder="B."></textarea>
@@ -115,7 +129,7 @@ $user=$_SESSION["user"];
                     <textarea name="question5" id="question_text" value="" required placeholder="Write your question here..."></textarea>
         
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer5" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer5" value="A" required></input>
                         <textarea name="answer_5A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer5" value="B"></input>
                         <textarea name="answer_5B" id="answer" value="" required placeholder="B."></textarea>
@@ -135,7 +149,7 @@ $user=$_SESSION["user"];
                     <textarea name="question6" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer6" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer6" value="A" required></input>
                         <textarea name="answer_6A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer6" value="B"></input>
                         <textarea name="answer_6B" id="answer" value="" required placeholder="B."></textarea>
@@ -155,7 +169,7 @@ $user=$_SESSION["user"];
                     <textarea name="question7" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer7" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer7" value="A" required></input>
                         <textarea name="answer_7A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer7" value="B"></input>
                         <textarea name="answer_7B" id="answer" value="" required placeholder="B."></textarea>
@@ -175,7 +189,7 @@ $user=$_SESSION["user"];
                     <textarea name="question8" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer8" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer8" value="A" required></input>
                         <textarea name="answer_8A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer8" value="B"></input>
                         <textarea name="answer_8B" id="answer" value="" required placeholder="B."></textarea>
@@ -195,7 +209,7 @@ $user=$_SESSION["user"];
                     <textarea name="question9" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer9" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer9" value="A" required></input>
                         <textarea name="answer_9A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer9" value="B"></input>
                         <textarea name="answer_9B" id="answer" value="" required placeholder="B."></textarea>
@@ -215,7 +229,7 @@ $user=$_SESSION["user"];
                     <textarea name="question10" id="question_text" value="" required placeholder="Write your question here..."></textarea>
 
                     <div class="radio">
-                        <input type="radio" id="radio_btn" name="answer10" value="A"></input>
+                        <input type="radio" id="radio_btn" name="answer10" value="A" required></input>
                         <textarea name="answer_10A" id="answer" value="" required placeholder="A."></textarea>
                         <input type="radio" id="radio_btn" name="answer10" value="B"></input>
                         <textarea name="answer_10B" id="answer" value="" required placeholder="B."></textarea>

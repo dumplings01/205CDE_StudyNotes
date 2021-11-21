@@ -1,6 +1,18 @@
 <?php
-session_start();
-$user=$_SESSION["user"];
+session_start();                // starts session for current page
+$user=$_SESSION["user"];        // assign session user attribute's value
+?>
+
+<?php
+    require_once ('mysqli_connect.php');
+    $user=$_SESSION["user"];
+
+    // if user tries to enter without logging in, they will be move out to signin-signup.php
+    if ($user === NULL) {
+        echo "<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Error! Please sign in to access this page!')
+            window.location.href='signin-signup.php';</SCRIPT>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +28,14 @@ $user=$_SESSION["user"];
     </head>
     
     <body>
+        <!-- TOP NAV BAR -->
         <div class="nav-fixed">
             <div class="navbar">
                 <a href="home.php"><img class="logo" src="src/logo.png" alt="logo"></a>
             </div>
         </div>
         
+        <!-- LEFT PANEL NAV BAR-->
         <nav>
             <ul>
                 <li><a href="myaccount.php">My Account</a></li>
@@ -31,40 +45,53 @@ $user=$_SESSION["user"];
             </ul>
         </nav>
         
+        <!-- RIGHT PANEL CONTENT -->
         <div class="rightcontent">
             <header><h1>History</h1></header>
-            <table>
-            <tr>
-                <th><h3>Question sheet name</h3></th>
-                <th><h3>Date Created</h3></th>
-            </tr>
 
             <?php
+                // Connect to database
                 $dbc=mysqli_connect('localhost','root', '', 'studynotes');
 
-                //Define the query:
+                // Define query
                 $query = "SELECT * FROM user_question_sheet WHERE username='".$user."' ORDER BY dateCreated DESC";
 
-                if ($r = mysqli_query($dbc, $query)) { //Run the query
+                if (mysqli_query($dbc, $query)->num_rows > 0) {
 
-                    //Retrieve and print every record:
-                    while ($row = mysqli_fetch_array($r)) {
-                        echo "<tr>
-                        <td>{$row['title']}</td>
-                        <td>{$row['dateCreated']}</td>
-                        </tr>";
+                    // Execute query to get records from database
+                    if ($r = mysqli_query($dbc, $query)) {
+
+                        // Create table
+                        echo "<table>
+                            <tr>
+                                <th><h3>Question sheet name</h3></th>
+                                <th><h3>Date Created</h3></th>
+                            </tr>";
+
+                        // Retrieve and print every record into table
+                        while ($row = mysqli_fetch_array($r)) {
+                            echo "<tr>
+                            <td>{$row['title']}</td>
+                            <td>{$row['dateCreated']}</td>
+                            </tr>";
+                        }
+                        echo "</table>";
+
+                    } else { 
+                        // Query did not run
+                        print '<p style="color: red;">Could not retrieve the data because: <br>'
+                        . mysqli_error($dbc) . ' .</p><p>The query being run was: ' . $query . '</p>';
+
                     }
-                    
-                } else { //Query didn't run
-                    print '<p style="color: red;">Could not retrieve the data because: <br>'
-                    . mysqli_error($dbc) . ' .</p><p>The query being run was: ' . $query . '</p>';
-
-                } // End of query IF.
-
-                mysqli_close($dbc); //CLose connection
+                } else {
+                    // If page is empty or no record is found in database
+                    echo "<center>
+                    <br><br>
+                    <p>Wow, it is so empty here :0<br>Looks like you have not save any questions yet~</p>
+                    </center>";
+                }
+                mysqli_close($dbc); // CLose connection
             ?>
-            </table>
         </div>
-
     </body>
 </html>
